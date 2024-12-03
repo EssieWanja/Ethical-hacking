@@ -1,3 +1,5 @@
+Target IP in this case is 10.6.6.23
+
 #!/bin/bash
 # Check if IP of target is entered
 if [ -z "$1" ]
@@ -8,5 +10,13 @@ then
 else
 
   echo "Target IP $1"
+echo "Running Nmap…"
+
+# Run Nmap scan on target and save results to file
+
+    nmap -sV $1 > scan_results.txt
+
+    echo "Scan complete – results written to scan_results.txt"
+
 
 fi
