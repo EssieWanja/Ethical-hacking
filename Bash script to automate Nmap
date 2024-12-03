@@ -1,0 +1,12 @@
+#!/bin/bash
+# Check if IP of target is entered
+if [ -z "$1" ]
+then
+ echo "Correct usage is ./recon.sh <IP>"
+ exit 1
+
+else
+
+  echo "Target IP $1"
+
+fi
